@@ -1,0 +1,164 @@
+<!-- Sarina Thapa_115518 -->
+
+<!-- Declares that this document uses HTML5 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- The head tag contains metadata and links to external resources. -->
+
+    <!-- Defines the character encoding to support different characters and symbols -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the webpage responsive on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Provides a short description of the webpage -->
+    <meta name="description" content="Explore different dog breeds with the PawSlider image gallery.">
+
+    <!-- Sets the title displayed in the browser tab -->
+    <title>PawSlider | Explore Dog Breeds</title>
+
+    <!-- Links the external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Loads JavaScript after the HTML document has been parsed -->
+    <script src="slider.js" defer></script>
+</head>
+
+<!-- The body tag contains all the content displayed on the webpage. -->
+<body>
+
+    <!-- The header tag contains the website heading and introduction. -->
+    <header class="site-header">
+
+        <!-- The h1 tag defines the main heading of the webpage. -->
+        <h1>PawSlider</h1>
+
+        <!-- The p tag defines a paragraph of text. -->
+        <p>Discover the wonderful world of dog breeds!</p>
+    </header>
+
+    <!-- The main tag contains the primary content of the webpage. -->
+    <main>
+
+        <!-- The section tag groups related content into a section. -->
+        <section class="gallery-section" aria-labelledby="gallery-title">
+
+            <!-- The h2 tag defines a second-level heading. -->
+            <h2 id="gallery-title">Meet Our Furry Friends</h2>
+
+            <!-- The p tag introduces the image slider. -->
+            <p class="intro">
+                Explore different dog breeds using our interactive image slider.
+            </p>
+
+            <!-- The div tag groups the slider, navigation buttons, and other elements. -->
+            <div class="slider-container" id="dogSlider"
+                 role="region" aria-roledescription="carousel"
+                 aria-label="Dog breeds gallery">
+
+                <!-- This div acts as a viewport that displays the visible part of the slider. -->
+                <div class="slider-viewport">
+
+                    <!-- This div contains all slides and moves horizontally using CSS. -->
+                    <div class="slider-track" id="sliderTrack">
+
+                        <!-- The article tag groups the content of the first dog slide. -->
+                        <article class="slide">
+
+                            <!-- The img tag displays an image. Width and height are set to 200 pixels. -->
+                            <img src="images/Golden Retreiver.jpg" alt="Golden Retriever dog" >
+
+                            <!-- This div groups the image caption and description. -->
+                            <div class="slide-caption">
+
+                                <!-- The h3 tag defines the heading for the dog breed. -->
+                                <h3>Golden Retriever</h3>
+
+                                <!-- The p tag describes the dog breed. -->
+                                <p>Friendly, playful, and affectionate.</p>
+                            </div>
+                        </article>
+
+                        <!-- The second article contains the Siberian Husky slide. -->
+                        <article class="slide">
+                            <img src="images/Siberian_Husky.jpg" alt="Siberian Husky dog" >
+                            <div class="slide-caption">
+                                <h3>Siberian Husky</h3>
+                                <p>Energetic, adventurous, and beautiful.</p>
+                            </div>
+                        </article>
+
+                        <!-- The third article contains the German Shepherd slide. -->
+                        <article class="slide">
+                            <img src="images/German_Shepherd.jpg" alt="German Shepherd dog">
+                            <div class="slide-caption">
+                                <h3>German Shepherd</h3>
+                                <p>Intelligent, loyal, and courageous.</p>
+                            </div>
+                        </article>
+
+                        <!-- The fourth article contains the Pembroke Welsh Corgi slide. -->
+                        <article class="slide">
+                            <img src="images/Pembroke_Welsh_Corgi.jpg" alt="Pembroke Welsh Corgi dog">
+                            <div class="slide-caption">
+                                <h3>Pembroke Welsh Corgi</h3>
+                                <p>Cheerful, playful, and full of personality.</p>
+                            </div>
+                        </article>
+
+                        <!-- The fifth article contains the Shiba Inu slide. -->
+                        <article class="slide">
+                            <img src="images/Shiba_Inu.jpg" alt="Shiba Inu dog">
+                            <div class="slide-caption">
+                                <h3>Shiba Inu</h3>
+                                <p>Alert, independent, and charming.</p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <!-- The button tag creates a clickable button to show the previous slide. -->
+                <button
+                    type="button"
+                    class="slider-btn prev-btn"
+                    id="prevBtn"
+                    aria-label="Previous dog breed"
+                >
+                    &#10094;
+                </button>
+
+                <!-- This button displays the next slide when clicked. -->
+                <button
+                    type="button"
+                    class="slider-btn next-btn"
+                    id="nextBtn"
+                    aria-label="Next dog breed"
+                >
+                    &#10095;
+                </button>
+
+                <!-- This div is used by JavaScript to generate navigation dots dynamically. -->
+                <div
+                    class="slider-dots"
+                    id="sliderDots"
+                    aria-label="Choose a dog breed"
+                ></div>
+
+                <!-- The p tag displays the current slide number and announces updates to screen readers. -->
+                <p class="slide-counter" id="slideCounter"
+                   aria-live="polite"></p>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- The footer tag contains copyright information at the bottom of the webpage. -->
+    <footer class="site-footer">
+        <p>&copy; 2026 PawSlider | Made with paw and love</p>
+    </footer>
+
+</body>
+</html>
